@@ -3,221 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My Website</title>
+    <title>Noor Boutique | Premium Ladies Clothing</title>
     <style>
-        /* Modern Reset & Global Styles */
+        /* Elegant Luxury Theme Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Playfair Display', 'Georgia', serif;
         }
 
         body {
-            background-color: #f8f9fa;
-            color: #212529;
+            background-color: #fffaf7;
+            color: #2c2c2c;
             line-height: 1.6;
         }
 
-        /* Navigation Bar */
+        p, a, button, .category-title {
+            font-family: 'Montserrat', 'Helvetica Neue', sans-serif;
+        }
+
+        /* Top Navigation */
         nav {
             background-color: #ffffff;
-            padding: 1rem 2rem;
+            padding: 1.5rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
             position: sticky;
             top: 0;
-            z-index: 100;
+            z-index: 1000;
         }
 
         nav .logo {
-            font-size: 1.25rem;
+            font-size: 1.6rem;
             font-weight: 700;
-            color: #007bff;
+            letter-spacing: 2px;
+            color: #8a1538; /* Royal Maroon Accent */
+            text-transform: uppercase;
         }
 
         nav ul {
             display: flex;
             list-style: none;
-            gap: 1.5rem;
+            gap: 2rem;
         }
 
         nav ul a {
             text-decoration: none;
-            color: #495057;
+            color: #555555;
             font-weight: 500;
-            transition: color 0.2s;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: color 0.3s;
         }
 
         nav ul a:hover {
-            color: #007bff;
+            color: #8a1538;
         }
 
-        /* Hero Section */
+        /* Hero Banner Section */
         header {
-            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            background: linear-gradient(rgba(138, 21, 56, 0.65), rgba(0, 0, 0, 0.4)), 
+                        url('https://unsplash.com') no-repeat center center/cover;
             color: white;
-            padding: 5rem 2rem;
+            padding: 10rem 2rem;
             text-align: center;
         }
 
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
+            letter-spacing: 3px;
+            font-weight: 400;
         }
 
         header p {
             font-size: 1.2rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
+            margin-bottom: 2.5rem;
+            letter-spacing: 2px;
+            font-weight: 300;
         }
 
-        .btn {
+        .btn-shop {
             display: inline-block;
             background-color: #ffffff;
-            color: #007bff;
-            padding: 0.75rem 1.5rem;
+            color: #8a1538;
+            padding: 1rem 2.5rem;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 0;
             font-weight: 600;
-            transition: transform 0.2s, box-shadow 0.2s;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        .btn-shop:hover {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #ffffff;
+            transform: translateY(-3px);
         }
 
-        /* Main Content Container */
+        /* Main Content Grid */
         .container {
-            max-width: 1000px;
-            margin: 4rem auto;
+            max-width: 1200px;
+            margin: 5rem auto;
             padding: 0 2rem;
         }
 
-        section {
-            margin-bottom: 4rem;
-        }
-
-        section h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #8a1538;
+            font-weight: 400;
             position: relative;
-            padding-bottom: 0.5rem;
         }
 
-        section h2::after {
+        .section-title::after {
             content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 50px;
-            height: 4px;
-            background-color: #007bff;
-            border-radius: 2px;
+            display: block;
+            width: 60px;
+            height: 1px;
+            background: #8a1538;
+            margin: 10px auto 0 auto;
         }
 
-        /* Grid Layout for Features/Projects */
-        .grid {
+        /* Clothing Collection Grid */
+        .collection-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
         }
 
-        .card {
-            background: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid #e9ecef;
+        .item-card {
+            background: #ffffff;
+            border: 1px solid #f0e6e1;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .card h3 {
+        .item-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(138, 21, 56, 0.05);
+        }
+
+        .item-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            background-color: #eaeaea;
+        }
+
+        .item-info {
+            padding: 1.5rem;
+        }
+
+        .category-title {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #999999;
             margin-bottom: 0.5rem;
-            color: #007bff;
+        }
+
+        .item-name {
+            font-size: 1.3rem;
+            color: #2c2c2c;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        /* Custom Order/Contact Section */
+        .order-section {
+            background-color: #f5eae4;
+            padding: 5rem 2rem;
+            text-align: center;
+            margin-top: 5rem;
+        }
+
+        .order-container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .order-section h2 {
+            color: #8a1538;
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 400;
+        }
+
+        .order-section p {
+            margin-bottom: 2rem;
+            color: #555557;
         }
 
         /* Footer */
         footer {
-            background-color: #212529;
-            color: #f8f9fa;
+            background-color: #1a1a1a;
+            color: #dcdcdc;
             text-align: center;
-            padding: 2rem;
-            margin-top: 6rem;
-            font-size: 0.9rem;
+            padding: 3rem 2rem;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
-        /* Mobile Responsive adjustments */
-        @media (max-width: 600px) {
-            header h1 { font-size: 2rem; }
-            nav { flex-direction: column; gap: 1rem; }
+        footer p {
+            opacity: 0.6;
+        }
+
+        /* Mobile View Fixes */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            nav { flex-direction: column; gap: 1rem; text-align: center; }
+            nav ul { gap: 1rem; }
         }
     </style>
+    <!-- Include elegant web fonts directly -->
+    <link href="https://googleapis.com" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation -->
+    <!-- Navigation Bar -->
     <nav>
-        <div class="logo">MyBrand</div>
+        <div class="logo">Noor Boutique</div>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#collections">Collections</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#contact">Order / Contact</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Header -->
+    <!-- Luxury Hero Top Cover -->
     <header>
-        <h1>Hello, World! Welcome to My New Site</h1>
-        <p>This custom static webpage is successfully hosted for free using GitHub Pages and mapped directly to a GoDaddy domain name.</p>
-        <a href="#contact" class="btn">Get In Touch</a>
+        <h1>Elegance In Every Thread</h1>
+        <p>Exquisite Designer Outfits & Custom Ethnic Wear for Modern Women</p>
+        <a href="#collections" class="btn-shop">Explore Collection</a>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
+    <!-- Main Clothing Gallery Section -->
+    <div class="container" id="collections">
+        <h2 class="section-title">Our Collections</h2>
         
-        <!-- About Section -->
-        <section id="about">
-            <h2>About Me</h2>
-            <p>Welcome to your brand new digital space. You can change this text right inside your GitHub index.html file to tell your visitors exactly who you are, what you build, or what services your business offers to clients.</p>
-        </section>
-
-        <!-- Services / Grid Section -->
-        <section id="services">
-            <h2>What I Do</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>Web Development</h3>
-                    <p>Building high-speed, secure, and beautiful static websites tailored to your exact professional specifications.</p>
-                </div>
-                <div class="card">
-                    <h3>UI/UX Design</h3>
-                    <p>Creating interactive user flows and modern interfaces that ensure a seamless visitor experience across all platforms.</p>
-                </div>
-                <div class="card">
-                    <h3>Digital Branding</h3>
-                    <p>Establishing clean online identities for fresh businesses, creators, and developers ready to stand out online.</p>
+        <div class="collection-grid">
+            <!-- Item 1: Kurtis -->
+            <div class="item-card">
+                <!-- Placeholder images from Unsplash lifestyle clothing gallery -->
+                <img src="https://unsplash.com" alt="Designer Kurti Collection" class="item-img">
+                <div class="item-info">
+                    <div class="category-title">Daily & Festive Wear</div>
+                    <h3 class="item-name">Designer Kurtis</h3>
                 </div>
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Interested in working together or want to say hello? You can link your email, social platforms, or business contacts right here.</p>
-            <p style="margin-top: 1rem;"><strong>Email:</strong> your-email@example.com</p>
-        </section>
+            <!-- Item 2: Sarees -->
+            <div class="item-card">
+                <img src="https://unsplash.com" alt="Premium Ethnic Sarees" class="item-img">
+                <div class="item-info">
+                    <div class="category-title">Traditional Elegance</div>
+                    <h3 class="item-name">Premium Sarees</h3>
+                </div>
+            </div>
 
+            <!-- Item 3: Bridal/Lehengas -->
+            <div class="item-card">
+                <img src="https://unsplash.com" alt="Exclusive Bridal Lehengas" class="item-img">
+                <div class="item-info">
+                    <div class="category-title">Wedding Luxury Wear</div>
+                    <h3 class="item-name">Exclusive Lehengas</h3>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 MyBrand. All Rights Reserved. Powered by GitHub Pages.</p>
-    </footer>
+    <!-- About Boutique Context -->
+    <div class="container" id="about" style="max-width: 800px; text-align: center; margin-bottom: 8rem;">
+        <h2 class="section-title">The Noor Touch</h2>
+        <p style="font-size: 1.1rem; color: #555; line-height: 1.8;">
+            At Noor Boutique, we design exquisite, tailor-made traditional attire crafted to bring your ethnic fashion dreams to life. Every pattern, stitch, and embellishment is curated meticulously to ensure you stand out gracefully on your special occasions.
+        </p>
+    </div>
 
-</body>
-</html>
+    <!-- Order and Location details -->
+    <div class="order-section" id="contact">
+        <div class="order-container">
+            <h2>Book a Custom Design Consultation</h2>
+            <p>We work exclusively on curated orders and customized boutique sizing. Reach out to design your dream dress or query current collections.</p>
+            
+            <a href="https://wa.me" target="_blank" class="btn-shop" style="background-color: #8a1538; color: #fff;">
+                📱 Connect via WhatsApp
+            </a>
+
+            <div style="margin-top: 2.5rem; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; color: #333;">
+                <p><strong>Boutique Store Location:</strong> India</p>
+                <p style="margin-top: 0.5rem;"><strong>Inquiries:</strong> info@noorboutique.in</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Elegant Footer -->
+    <footer>
+        <p>&copy; 2026 Noor Boutique. All Rights Reserved.</p>
