@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+    <style>
+        /* Modern Reset & Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #ffffff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #007bff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav ul a:hover {
+            color: #007bff;
+        }
+
+        /* Hero Section */
+        header {
+            background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #ffffff;
+            color: #007bff;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 4px;
+            background-color: #007bff;
+            border-radius: 2px;
+        }
+
+        /* Grid Layout for Features/Projects */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e9ecef;
+        }
+
+        .card h3 {
+            margin-bottom: 0.5rem;
+            color: #007bff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #212529;
+            color: #f8f9fa;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 6rem;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive adjustments */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            nav { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">MyBrand</div>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Header -->
+    <header>
+        <h1>Hello, World! Welcome to My New Site</h1>
+        <p>This custom static webpage is successfully hosted for free using GitHub Pages and mapped directly to a GoDaddy domain name.</p>
+        <a href="#contact" class="btn">Get In Touch</a>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Welcome to your brand new digital space. You can change this text right inside your GitHub index.html file to tell your visitors exactly who you are, what you build, or what services your business offers to clients.</p>
+        </section>
+
+        <!-- Services / Grid Section -->
+        <section id="services">
+            <h2>What I Do</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Web Development</h3>
+                    <p>Building high-speed, secure, and beautiful static websites tailored to your exact professional specifications.</p>
+                </div>
+                <div class="card">
+                    <h3>UI/UX Design</h3>
+                    <p>Creating interactive user flows and modern interfaces that ensure a seamless visitor experience across all platforms.</p>
+                </div>
+                <div class="card">
+                    <h3>Digital Branding</h3>
+                    <p>Establishing clean online identities for fresh businesses, creators, and developers ready to stand out online.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Interested in working together or want to say hello? You can link your email, social platforms, or business contacts right here.</p>
+            <p style="margin-top: 1rem;"><strong>Email:</strong> your-email@example.com</p>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 MyBrand. All Rights Reserved. Powered by GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
